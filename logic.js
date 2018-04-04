@@ -28,9 +28,9 @@ function startGame(	) {
 
 	numGuesses = 9;
 
-	ChosenWord = gamesList[Math.floor(Math.random() * gamesList.length)]
+	chosenWord = gamesList[Math.floor(Math.random() * gamesList.length)];
   
-	letterInChosenWord = chosenWord.split('');
+	letterInChosenWord = chosenWord.split("");
 
 	numBlanks = letterInChosenWord.length;
 
@@ -45,14 +45,16 @@ for (var i =0; i <numBlanks; i++){
 
 console.log(blanksAndSuccesses)
 
-document.getElementById("guesses-left").innerHTML = numGuesses
+document.getElementById("guesses-left").innerHTML = numGuesses;
+
 document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join(" ")
+
 document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ")
 
 }
 
 
-function checkLetters(Letter) {
+function checkLetters(letter) {
 	var letterInWord = false;
 
 	for (var i=0; i < numBlanks; i++){
