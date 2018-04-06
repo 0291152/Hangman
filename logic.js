@@ -1,6 +1,6 @@
 
 
-var gamesList = ["rainbow six siege", "mario kart", "counter strike", "l o z ocarina of time"];
+var gamesList = ["rainbow six siege", "mario kart", "counter strike", "l o z ocarina of time", "the sims","super mario world", "street fighter", "doom", "pokemon", "star fox", "metal gear solid", "fortnite"];
 
 var chosenWord = '';
 
