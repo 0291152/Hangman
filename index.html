@@ -2,14 +2,16 @@
 <html>
 <head>
 	<title>Video Game Hangman</title>
+	  <!-- Bootstrap CDN -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
    
-</style>
+  <!-- Bootstrap 'container' that will hold everything -->
 
 	<div class='container'>
+			<!-- Jumbotron holds the title section -->
 		<div class='jumbotron'>
 			<div class='container'>
 				<h1 style=" color: #c4c4c4" > Video Game Hangman</h1>
@@ -18,53 +20,57 @@
 			</div>
 		</div>
 	</div>
-
+	
+	<!-- Game counters held here. Panels are used to hold the section -->
 	<div class='row'>
 		<div class="col-lg-12">
 			
-
+			<!-- First Pannel: Holds the word to guess (blanks and guessed word). -->
 			<div class="panel panel-default">
 				<div class='panel-heading'>
 					<h3 class="panel-title"><strong>Word to Guess</strong></h3>
 				</div>
 
 				<div class="panel-body">
-					
+					<!-- This h3 secction is what we'll be replacing with letters as the user guesses --> 
 					<h3 id='word-blanks'>_ _ _ _ _ _ _ _ _</h3>
 
 				</div>
 			</div>
 
-
+			<!-- Second Panel: Holds the list of Wrong User Guesses -->
 			<div class='panel panel-default'>
 				<div class="panel-body"></div>
-
+				<!-- This span section is where we'll be dumping the wrong guesses -->
 				<strong>Wrong Guesses: </strong> <span id='wrong-guesses'></span>
 			</div>
 
 
 
-
+			<!-- Third Panel: Holds the Number of Wrong Guesses -->
 			<div class='panel panel-default'>
 				<div class="panel-body"></div>
-
+				
+				<!-- This span is where we'll dump the number of guesses left -->
 				<strong>Guesses Left: </strong> <span id='guesses-left'>9</span>
 			</div>
 
-
-
+			
+			<!-- Fourth Panel: Holds the number of Wins. -->
 			<div class='panel panel-default'>
 				<div class="panel-body"></div>
-
+				
+				<!-- We'll be dumping the number of wins here -->
 				<strong>Wins: </strong> <span id='win-counter'>0</span>
 			</div>
 
 
 
-
+			<!-- Fifth Panel: Holds the number of losses -->
 			<div class='panel panel-default'>
 				<div class="panel-body"></div>
 
+				<!-- We'll be dumping the number of losses here -->
 				<strong>Losses: </strong> <span id='loss-counter'>0</span>
 			</div>
 
@@ -77,7 +83,7 @@
 	</div>
 
 
-
+	<!-- Adds a link to the Java Script file. It is loaded at the bottom so that it waits for the HTML content to display first. If you put this link at the top, it will crash because the HTML IDs won't exist -->
 	<script src='logic.js'> </script>
 	
 
