@@ -69,28 +69,37 @@ function startGame() {
 	document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
 
 }
-
+//Here is where we'll do all of the comparisons for matches
 function checkLetters(letter) {
+	// a boolean which will be toggled based on whether or not a userletter is found anywhere in the word
 	var letterInWord = false;
 
 	for (var i=0; i < numBlanks; i++) {
 		if (chosenWord[i] === letter) {
+			//If the letter exists then change this to true it will be used in the next step
 			letterInWord = true;
 		}
 	}
 
-
+	// if the letter exists somewhere in the word, then figure out exactly where (what index)
 	if (letterInWord) {
+		// loop throught the word
 		for (var j=0; j < numBlanks; j++) {
+			// Populate the blanksAndSuccesses with every instance of the letter 
 			if (chosenWord[j] === letter) {
+				//set specificic blank spaces to equal the correct letter when there is a match
 				blanksAndSuccesses[j] = letter;
 			}
 		}
+		// Log for testing purposes
 		console.log(blanksAndSuccesses);
 	} 
 
+	// if the letter doesn't exist at all...
 	else {
+		// then we add the letter of the list of wrong letters
 		wrongGuesses.push(letter);
+		// We also subtract one of the guesses
 		numGuesses--;
 	}
 }
